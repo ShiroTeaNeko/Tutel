@@ -134,6 +134,7 @@ def dessine_etage_colore(etage, couleur):
 
 def dessine_immeuble_colore():
     turtle.down()
+    turtle.forward(50)
     color = "#" + ''.join([random.choice('0123456789ABCDEF') for j in range(6)])
     turtle.fillcolor(color)
     turtle.begin_fill()
@@ -141,10 +142,10 @@ def dessine_immeuble_colore():
     dessine_RDC_colore(color)
     etage = random.randint(0, 4)
     for e in range(0, etage):
-        turtle.goto(drawImmeublePos, 60 + 60 * e)
+        turtle.goto(drawImmeublePos + offset, 60 + 60 * e)
         dessine_etage_colore(etage, color)
 
-    turtle.goto(drawImmeublePos, 60 + 60 * etage)
+    turtle.goto(drawImmeublePos + offset, 60 + 60 * etage)
     dessine_triangle_colore(140, 50)
     turtle.up()
 
@@ -156,8 +157,7 @@ def dessine_immeuble_colore():
 # dessine_etage_colore(1, '#3c79b8')
 
 c = 0
-start = -700
-drawImmeublePos = -700
+drawImmeublePos = start = -1000
 offset = 50
 largeur = 140
 turtle.speed(0.5)
