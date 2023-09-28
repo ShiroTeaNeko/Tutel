@@ -58,6 +58,7 @@ def dessine_window():
     # color = "#" + ''.join([random.choice('0123456789ABCDEF') for j in range(6)])
     # turtle.fillcolor(color)
     turtle.up()
+    turtle.speed(1)
     turtle.forward(12.5)
     turtle.left(90)
     turtle.forward(20)
@@ -149,13 +150,7 @@ def dessine_immeuble_colore():
     dessine_triangle_colore(140, 50)
     turtle.up()
 
-
-# dessine_triangle_colore(40, 80, '#3c79b8')
-# dessine_rectangle_colore(20, 20, '#3c79b8')
-# dessine_demidisque_colore(20,'#3c79b8')
-
-# dessine_etage_colore(1, '#3c79b8')
-
+### MAIN PROGRAM ###
 c = 0
 drawImmeublePos = start = -1000
 offset = 50
